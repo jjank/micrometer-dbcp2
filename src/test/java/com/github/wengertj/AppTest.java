@@ -19,11 +19,8 @@ import java.util.concurrent.locks.LockSupport;
 @SpringJUnitConfig(AppTest.ContextConfiguration.class)
 class AppTest {
 
-    @Autowired
-    private DataSource ds;
-
     @Test
-    void testAConnection() {
+    void testAConnection(@Autowired DataSource ds) {
 
         try (var conn = ds.getConnection();
              var statement = conn.createStatement()) {
