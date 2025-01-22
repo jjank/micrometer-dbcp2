@@ -47,7 +47,7 @@ class AppTest {
             ds.setUsername("sa");
             ds.setPassword("");
             ds.setUrl("jdbc:h2:mem:testdb");
-            ds.setJmxName("org.apache.commons.pool2:name=dbcp,type=GenericObjectPool");
+            ds.setJmxName("org.apache.commons.pool2:type=GenericObjectPool");
 
             return ds;
         }
